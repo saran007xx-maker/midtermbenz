@@ -1,10 +1,12 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+html {
+  overflow-x: hidden;   
+  max-width: 100%;
+}
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: #ede9df;
@@ -18,22 +20,18 @@ body {
   color: #1a1a1a;
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
 }
-
-/* Base Headings */
 .big-display-title,
 .item-title-wire,
 .note-heading {
   color: #0a0a0a;
   text-shadow: none;
 }
-
 .sub-tagline {
   color: #334155;
   text-shadow: none;
 }
-
-/* Base Wireframe Box */
 .wireframe-box {
   background-color: #ffffff;
   border: 2px dashed #94a3b8;
@@ -49,8 +47,6 @@ body {
   position: relative;
   box-shadow: 4px 8px 18px rgba(0, 0, 0, 0.1);
 }
-
-/* Tape / Washi / Pin Elements */
 .tape {
   position: absolute;
   z-index: 5;
@@ -60,8 +56,6 @@ body {
   background-size: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
-
-/* Tape 1: Masking tape แนวนอน (สัดส่วน ~ 2.25:1) */
 .tape,
 .tape-1 {
   top: -15px;
@@ -71,8 +65,6 @@ body {
   height: 40px;
   background-image: url('image/tape1.png');
 }
-
-/* Tape 2: Masking tape แบบมีรอยพับมุม (สัดส่วน ~ 1.63:1) */
 .tape-2 {
   top: -18px;
   left: 50%;
@@ -81,14 +73,11 @@ body {
   height: 48px;
   background-image: url('image/tape2.png');
 }
-
-/* ปรับสเกลเทปสำหรับภาพขนาดใหญ่ */
 .spotlight-hero-img .tape {
   width: 120px;
   height: 54px;
   top: -24px;
 }
-
 .pin {
   position: absolute;
   top: -18px;
@@ -100,7 +89,6 @@ body {
   z-index: 5;
   pointer-events: none;
 }
-
 .tape-tag {
   display: inline-block;
   background-color: #0047AB;
@@ -116,12 +104,10 @@ body {
   margin-bottom: 30px;
   width: fit-content;
 }
-
 .home-logo-wrapper {
   margin-bottom: 12px;
   display: inline-block;
 }
-
 .home-oasis-logo {
   height: 90px;
   max-width: 100%;
@@ -131,12 +117,9 @@ body {
   box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 }
-
 .home-oasis-logo:hover {
   box-shadow: 6px 10px 24px rgba(0, 0, 0, 0.7);
 }
-
-/* Text Line Placeholders */
 .line-placeholder {
   height: 10px;
   background-color: #cbd5e1;
@@ -144,17 +127,14 @@ body {
   margin: 10px 0;
   width: 100%;
 }
-
 .line-placeholder.short {
   width: 60%;
 }
-
 .section {
   padding: 70px 7% 90px;
   min-height: 85vh;
   position: relative;
 }
-
 .navbar {
   position: sticky;
   top: 0;
@@ -167,7 +147,6 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   z-index: 100;
 }
-
 .logo-badge {
   font-weight: 800;
   background: #f1f5f9;
@@ -176,7 +155,6 @@ body {
   transform: rotate(-1deg);
   letter-spacing: 1px;
 }
-
 .logo-badge.oasis-box {
   background: #000000;
   color: #ffffff;
@@ -190,7 +168,6 @@ body {
   padding: 2px 14px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
-
 .item-caption {
   font-size: 0.76rem;
   font-weight: 800;
@@ -201,7 +178,6 @@ body {
   margin-top: 10px;
   font-family: 'Inter', sans-serif;
 }
-
 .nav-links a {
   color: #64748b;
   text-decoration: none;
@@ -213,15 +189,12 @@ body {
   border-radius: 4px;
   transition: all 0.2s ease;
 }
-
 .nav-links a:hover {
   color: #0047AB;
 }
-
 .nav-links a.active {
   color: #0047AB;
 }
-
 .page-switch-bar {
   display: flex;
   justify-content: space-between;
@@ -230,7 +203,6 @@ body {
   padding-top: 30px;
   border-top: 1px dashed rgba(0, 0, 0, 0.15);
 }
-
 .page-btn {
   display: inline-flex;
   align-items: center;
@@ -249,14 +221,12 @@ body {
   box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.2);
   transition: all 0.25s ease;
 }
-
 .page-btn:hover {
   background: #0047AB;
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 6px 10px 20px rgba(0, 71, 171, 0.45);
 }
-
 .hero-layout {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -264,26 +234,22 @@ body {
   align-items: center;
   margin-top: 20px;
 }
-
 .big-display-title {
   font-size: 2.2rem;
   font-weight: 900;
   letter-spacing: -0.5px;
   margin-bottom: 10px;
 }
-
 .sub-tagline {
   color: #94a3b8;
   font-size: 1.1rem;
   font-style: italic;
   margin-bottom: 16px;
 }
-
 .hero-collage {
   position: relative;
   height: 480px;
 }
-
 .hero-main-pic {
   width: 80%;
   height: 380px;
@@ -294,7 +260,6 @@ body {
   z-index: 2;
   box-shadow: 8px 12px 24px rgba(0, 0, 0, 0.4);
 }
-
 .hero-sub-pic-1 {
   width: 45%;
   height: 220px;
@@ -307,7 +272,6 @@ body {
   border-color: #64748b;
   box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.5);
 }
-
 .hero-sticker {
   width: 140px;
   height: 140px;
@@ -322,7 +286,6 @@ body {
   z-index: 4;
   background: #1e1b18;
 }
-
 .tilt-card.has-image {
   background-color: #0f1218;
   border: 5px solid #f8fafc;
@@ -330,20 +293,16 @@ body {
   box-shadow: 8px 14px 28px rgba(0, 0, 0, 0.55);
   position: relative;
 }
-
 .hero-main-pic.has-image,
 .hero-sub-pic-1.has-image {
   position: absolute;
 }
-
 .tilt-card.has-image .collage-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-
 .hero-guitar-wrapper {
   position: absolute;
   right: -35px;
@@ -353,27 +312,23 @@ body {
   transform: rotate(18deg);
   filter: drop-shadow(10px 16px 24px rgba(0, 0, 0, 0.8));
 }
-
 .hero-guitar-img {
   height: 100%;
   width: auto;
   display: block;
   user-select: none;
 }
-
 .hero-guitar-wrapper:hover {
   transform: rotate(12deg) scale(1.06) translateY(-12px);
   filter: drop-shadow(14px 22px 32px rgba(0, 0, 0, 0.95));
   z-index: 15;
 }
-
 .system-filter-pills {
   display: flex;
   gap: 16px;
   margin-bottom: 36px;
   flex-wrap: wrap;
 }
-
 .pill {
   padding: 8px 18px;
   background-color: #0a0a0a;
@@ -387,33 +342,27 @@ body {
   color: #f8fafc;
   cursor: pointer;
 }
-
 .pill:hover {
   border-color: #0047AB;
   color: #ffffff;
 }
-
 .pill.active {
   background-color: #0047AB;
   border-color: #0284c7;
   color: #ffffff;
   box-shadow: 0 0 12px rgba(0, 71, 171, 0.45);
 }
-
 .pill.tilt-left {
   transform: rotate(-2deg);
 }
-
 .pill.tilt-right {
   transform: rotate(2deg);
 }
-
 .scatter-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 36px 24px;
 }
-
 .item-card {
   position: relative;
   background: #ffffff;
@@ -421,13 +370,11 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 6px 12px 24px rgba(0, 0, 0, 0.16);
 }
-
 .polaroid-photo {
   height: 200px;
   width: 100%;
   margin-bottom: 12px;
 }
-
 .polaroid-photo.has-img {
   overflow: hidden;
   border-radius: 2px;
@@ -437,40 +384,33 @@ body {
   justify-content: center;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.08);
 }
-
 .polaroid-photo .polaroid-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 .polaroid-photo .polaroid-img.contain-img {
   object-fit: contain;
   padding: 8px;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
 }
-
 .caption-line {
   height: 10px;
   background-color: #cbd5e1;
   width: 70%;
   margin: 0 auto;
 }
-
-
 .spotlight-layout {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 50px;
   align-items: center;
 }
-
 .spotlight-gallery {
   position: relative;
   height: 440px;
 }
-
 .spotlight-hero-img {
   width: 85%;
   height: 380px;
@@ -480,7 +420,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 8px 16px 32px rgba(0, 0, 0, 0.2);
 }
-
 .detail-zoom {
   position: absolute;
   width: 130px;
@@ -489,21 +428,18 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 6px 12px 20px rgba(0, 0, 0, 0.16);
 }
-
 .zoom-1 {
   bottom: 15px;
   right: 15px;
   transform: rotate(5deg);
   z-index: 4;
 }
-
 .zoom-2 {
   top: 20px;
   right: 25px;
   transform: rotate(-4deg);
   z-index: 3;
 }
-
 .text-board {
   background: #ffffff;
   border: 2px dashed #0047AB;
@@ -514,7 +450,6 @@ body {
   gap: 16px;
   box-shadow: 8px 16px 28px rgba(0, 0, 0, 0.16);
 }
-
 .item-number {
   font-family: 'Inter', monospace;
   color: #0047AB;
@@ -523,7 +458,6 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-
 .item-title-wire {
   font-family: 'Anton', 'Bebas Neue', 'Impact', sans-serif;
   font-size: 2.8rem;
@@ -534,7 +468,6 @@ body {
   line-height: 0.95;
   text-shadow: none;
 }
-
 .highlight-box {
   background: rgba(0, 71, 171, 0.08);
   border: 1.5px dashed #0047AB;
@@ -548,7 +481,6 @@ body {
   text-align: center;
   transform: rotate(-1deg);
 }
-
 .about-workbench {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
@@ -556,7 +488,6 @@ body {
   align-items: center;
   margin-top: 30px;
 }
-
 .note-paper {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -568,15 +499,12 @@ body {
   box-shadow: 6px 12px 24px rgba(0, 0, 0, 0.14);
   color: #1e293b;
 }
-
 .left-note {
   transform: rotate(-3.5deg);
 }
-
 .right-note {
   transform: rotate(4deg);
 }
-
 .note-heading {
   font-family: 'Anton', 'Bebas Neue', 'Impact', sans-serif;
   font-weight: 900;
@@ -587,7 +515,6 @@ body {
   color: #0a0a0a;
   text-shadow: none;
 }
-
 .moodboard-frame {
   height: 380px;
   transform: rotate(1deg);
@@ -596,7 +523,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 8px 18px 32px rgba(0, 0, 0, 0.2);
 }
-
 .footer {
   padding: 40px 7%;
   text-align: center;
@@ -609,33 +535,6 @@ body {
   border-top: 1px dashed rgba(0, 0, 0, 0.15);
   text-shadow: none;
 }
-
-@media (max-width: 900px) {
-  .scatter-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .hero-layout,
-  .spotlight-layout,
-  .about-workbench {
-    display: flex;
-    flex-direction: column;
-  }
-  .hero-collage,
-  .spotlight-gallery {
-    width: 100%;
-  }
-
-  .hero-guitar-wrapper {
-    height: 320px;
-    right: -10px;
-    bottom: -20px;
-  }
-
-  .home-oasis-logo {
-    height: 80px;
-  }
-}
-
 body.poster-layout-page {
   height: 100vh;
   max-height: 100vh;
@@ -655,7 +554,6 @@ body.poster-layout-page {
   margin: 0;
   box-sizing: border-box;
 }
-
 .poster-navbar {
   display: flex;
   justify-content: space-between;
@@ -664,25 +562,21 @@ body.poster-layout-page {
   z-index: 50;
   flex-shrink: 0;
 }
-
 .nav-left-brand {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-
 .nav-oasis-logo {
   height: 44px;
   width: auto;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
 }
-
 .nav-brand-text {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
-
 .nav-brand-title {
   font-family: 'Anton', 'Bebas Neue', 'Impact', sans-serif;
   font-size: 1.15rem;
@@ -690,7 +584,6 @@ body.poster-layout-page {
   color: #0a0a0a;
   line-height: 1;
 }
-
 .nav-brand-sub {
   font-family: 'Inter', sans-serif;
   font-size: 0.65rem;
@@ -699,12 +592,10 @@ body.poster-layout-page {
   font-weight: 700;
   text-transform: uppercase;
 }
-
 .poster-nav-links {
   display: flex;
   gap: 32px;
 }
-
 .poster-nav-links a {
   font-family: 'Inter', sans-serif;
   font-size: 0.8rem;
@@ -717,15 +608,12 @@ body.poster-layout-page {
   padding-bottom: 5px;
   transition: color 0.2s;
 }
-
 .poster-nav-links a:hover {
   color: #0047AB;
 }
-
 .poster-nav-links a.active {
   color: #0047AB;
 }
-
 .poster-nav-links a.active::after {
   content: '';
   position: absolute;
@@ -736,7 +624,6 @@ body.poster-layout-page {
   background-color: #0047AB;
   border-radius: 2px;
 }
-
 .poster-main-viewport {
   flex: 1;
   display: grid;
@@ -749,7 +636,6 @@ body.poster-layout-page {
   box-sizing: border-box;
   column-gap: 0;
 }
-
 .poster-left-content {
   display: flex;
   flex-direction: column;
@@ -758,7 +644,6 @@ body.poster-layout-page {
   z-index: 10;
   max-width: 520px;
 }
-
 .poster-title-img-wrapper {
   margin-top: -10px;
   margin-bottom: 5px;
@@ -766,7 +651,6 @@ body.poster-layout-page {
   position: relative;
   z-index: 2;
 }
-
 .poster-title-img {
   width: 100%;
   max-width: 100%;
@@ -775,7 +659,6 @@ body.poster-layout-page {
   user-select: none;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.14));
 }
-
 .live-forever-tag {
   font-family: 'Caveat', cursive;
   font-size: 2.6rem;
@@ -788,7 +671,6 @@ body.poster-layout-page {
   width: fit-content;
   letter-spacing: 0.5px;
 }
-
 .live-forever-tag::after {
   content: '';
   position: absolute;
@@ -799,13 +681,11 @@ body.poster-layout-page {
   background-color: #0047AB;
   transform: rotate(-1deg);
 }
-
 .huge-title-container {
   position: relative;
   margin-top: 5px;
   margin-bottom: 6px;
 }
-
 .blue-brush-backdrop {
   position: absolute;
   top: 15%;
@@ -819,7 +699,6 @@ body.poster-layout-page {
   clip-path: polygon(0% 18%, 95% 0%, 100% 70%, 85% 100%, 8% 90%);
   box-shadow: 0 4px 20px rgba(0, 71, 171, 0.45);
 }
-
 .title-oasis {
   font-family: 'Anton', 'Bebas Neue', 'Impact', sans-serif;
   font-size: clamp(5.2rem, 8.8vw, 8.2rem);
@@ -835,7 +714,6 @@ body.poster-layout-page {
   margin: 0;
   text-shadow: 2px 3px 0px rgba(0, 0, 0, 0.12);
 }
-
 .title-collection {
   font-family: 'Anton', 'Bebas Neue', 'Impact', sans-serif;
   font-size: clamp(2.6rem, 4.5vw, 4.2rem);
@@ -851,7 +729,6 @@ body.poster-layout-page {
   margin: 0;
   text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.12);
 }
-
 .poster-sub-title {
   font-family: 'Anton', 'Bebas Neue', sans-serif;
   font-size: 1.25rem;
@@ -860,7 +737,6 @@ body.poster-layout-page {
   margin-top: 14px;
   text-transform: uppercase;
 }
-
 .poster-desc-text {
   font-family: 'Inter', -apple-system, sans-serif;
   color: #334155;
@@ -872,12 +748,10 @@ body.poster-layout-page {
   max-width: 440px;
   padding-left: 40px;
 }
-
 .poster-btn-wrapper {
   margin-top: 22px;
   padding-left: 40px;
 }
-
 .poster-explore-btn {
   display: inline-flex;
   align-items: center;
@@ -896,13 +770,11 @@ body.poster-layout-page {
   box-shadow: 4px 6px 14px rgba(0, 0, 0, 0.25);
   transition: all 0.25s ease;
 }
-
 .poster-explore-btn:hover {
   background-color: #0047AB;
   transform: translateY(-2px);
   box-shadow: 6px 10px 20px rgba(0, 71, 171, 0.45);
 }
-
 .poster-bottom-meta {
   display: flex;
   align-items: center;
@@ -914,7 +786,6 @@ body.poster-layout-page {
   color: #64748b;
   padding-left: 40px;
 }
-
 .poster-right-collage {
   position: relative;
   height: 100%;
@@ -925,7 +796,6 @@ body.poster-layout-page {
   justify-content: center;
   overflow: visible;
 }
-
 .collage-stage {
   position: relative;
   width: 640px;
@@ -934,7 +804,6 @@ body.poster-layout-page {
   display: block;
   transform-origin: center center;
 }
-
 .blue-tape {
   position: absolute;
   width: 75px;
@@ -945,19 +814,16 @@ body.poster-layout-page {
   z-index: 10;
   clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);
 }
-
 .blue-tape.tape-corner-left {
   top: -14px;
   left: -16px;
   transform: rotate(-32deg);
 }
-
 .blue-tape.tape-top-center {
   top: -12px;
   left: 45%;
   transform: translateX(-50%) rotate(4deg);
 }
-
 .polaroid-band {
   position: absolute;
   top: 10px;
@@ -969,14 +835,12 @@ body.poster-layout-page {
   box-shadow: 6px 14px 30px rgba(0, 0, 0, 0.28);
   z-index: 2;
 }
-
 .polaroid-band .photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 .handwritten-manchester {
   position: absolute;
   top: -30px;
@@ -987,12 +851,10 @@ body.poster-layout-page {
   z-index: 10;
   pointer-events: none;
 }
-
 .crown-doodle {
   font-size: 1.6rem;
   line-height: 1;
 }
-
 .script-manchester {
   font-family: 'Caveat', cursive;
   font-size: 2.2rem;
@@ -1001,7 +863,6 @@ body.poster-layout-page {
   transform: rotate(-4deg);
   letter-spacing: 0.5px;
 }
-
 .torn-concert {
   position: absolute;
   top: 260px;
@@ -1015,7 +876,6 @@ body.poster-layout-page {
   z-index: 5;
   transition: transform 0.3s ease;
 }
-
 .torn-concert .photo-img {
   width: 100%;
   height: 100%;
@@ -1023,7 +883,6 @@ body.poster-layout-page {
   display: block;
   filter: grayscale(80%) contrast(115%);
 }
-
 .some-might-say-scrap {
   position: absolute;
   top: 30px;
@@ -1040,7 +899,6 @@ body.poster-layout-page {
   border: 1px dashed #cbd5e1;
   z-index: 7;
 }
-
 .ticket-knebworth {
   position: absolute;
   top: 35px;
@@ -1052,13 +910,11 @@ body.poster-layout-page {
   border: 2px solid #fff;
   transition: transform 0.3s ease;
 }
-
 .ticket-knebworth .ticket-img {
   width: 100%;
   height: auto;
   display: block;
 }
-
 .epiphone-guitar {
   position: absolute;
   bottom: -40px;
@@ -1070,13 +926,11 @@ body.poster-layout-page {
   transition: transform 0.4s ease;
   cursor: pointer;
 }
-
 .epiphone-guitar .guitar-img {
   height: 100%;
   width: auto;
   display: block;
 }
-
 .handwritten-definitely-maybe {
   position: absolute;
   bottom: 20px;
@@ -1092,7 +946,6 @@ body.poster-layout-page {
   z-index: 8;
   white-space: nowrap;
 }
-
 .round-oasis-patch {
   position: absolute;
   top: 300px;
@@ -1100,7 +953,6 @@ body.poster-layout-page {
   z-index: 9;
   transform: rotate(-8deg);
 }
-
 .mini-oasis-badge {
   background: #000;
   color: #fff;
@@ -1113,7 +965,6 @@ body.poster-layout-page {
   font-size: 1.25rem;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
-
 .paint-splatter {
   position: absolute;
   background: #0284c7;
@@ -1121,7 +972,6 @@ body.poster-layout-page {
   filter: blur(2px);
   pointer-events: none;
 }
-
 .splatter-top {
   top: 5px;
   right: 50px;
@@ -1129,7 +979,6 @@ body.poster-layout-page {
   height: 160px;
   clip-path: polygon(25% 0%, 100% 15%, 85% 85%, 15% 100%, 0% 45%);
 }
-
 .splatter-center {
   top: 150px;
   left: 30px;
@@ -1137,7 +986,6 @@ body.poster-layout-page {
   height: 260px;
   clip-path: polygon(10% 20%, 90% 10%, 100% 80%, 20% 90%);
 }
-
 .splatter-bottom {
   bottom: 5px;
   right: 10px;
@@ -1145,11 +993,9 @@ body.poster-layout-page {
   height: 180px;
   clip-path: polygon(30% 10%, 100% 30%, 80% 95%, 0% 70%);
 }
-
 .item-card.is-hidden {
   display: none !important;
 }
-
 .card-meta-tag {
   display: flex;
   justify-content: center;
@@ -1158,7 +1004,6 @@ body.poster-layout-page {
   margin-top: 6px;
   margin-bottom: 4px;
 }
-
 .tag-pill {
   font-family: 'Inter', sans-serif;
   font-size: 0.64rem;
@@ -1170,12 +1015,10 @@ body.poster-layout-page {
   border-radius: 2px;
   text-transform: uppercase;
 }
-
 .tag-pill.tag-year {
   background: #0a0a0a;
   color: #ffffff;
 }
-
 .card-sub-desc {
   font-family: 'Inter', sans-serif;
   font-size: 0.72rem;
@@ -1184,7 +1027,6 @@ body.poster-layout-page {
   margin: 3px 0 8px;
   line-height: 1.35;
 }
-
 .card-view-btn {
   display: inline-flex;
   align-items: center;
@@ -1202,12 +1044,9 @@ body.poster-layout-page {
   padding-top: 8px;
   margin-top: 6px;
 }
-
-
 .masterpiece-selector-wrapper {
   margin-bottom: 28px;
 }
-
 .selector-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.74rem;
@@ -1217,7 +1056,6 @@ body.poster-layout-page {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
 .masterpiece-selector {
   display: flex;
   gap: 12px;
@@ -1225,7 +1063,6 @@ body.poster-layout-page {
   padding-bottom: 12px;
   scrollbar-width: thin;
 }
-
 .selector-tab {
   display: inline-flex;
   align-items: center;
@@ -1243,13 +1080,11 @@ body.poster-layout-page {
   transition: all 0.22s ease;
   user-select: none;
 }
-
 .selector-tab:hover {
   border-color: #0047AB;
   color: #0047AB;
   transform: translateY(-2px);
 }
-
 .selector-tab.active {
   background: #0047AB;
   color: #ffffff;
@@ -1257,7 +1092,6 @@ body.poster-layout-page {
   box-shadow: 0 4px 14px rgba(0, 71, 171, 0.35);
   transform: translateY(-2px);
 }
-
 .piece-specs-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1269,12 +1103,10 @@ body.poster-layout-page {
   font-family: 'Inter', sans-serif;
   margin: 10px 0;
 }
-
 .spec-item {
   display: flex;
   flex-direction: column;
 }
-
 .spec-label {
   font-weight: 800;
   color: #0047AB;
@@ -1283,12 +1115,10 @@ body.poster-layout-page {
   font-size: 0.65rem;
   margin-bottom: 2px;
 }
-
 .spec-val {
   color: #1e293b;
   font-weight: 700;
 }
-
 .piece-story-text {
   font-size: 0.92rem;
   line-height: 1.7;
@@ -1296,14 +1126,12 @@ body.poster-layout-page {
   margin: 6px 0;
   font-family: 'Inter', sans-serif;
 }
-
 .why-special-box {
   background: #eff6ff;
   border-left: 4px solid #0047AB;
   padding: 14px 18px;
   margin-top: 10px;
 }
-
 .why-special-title {
   font-family: 'Anton', 'Bebas Neue', sans-serif;
   font-size: 1.15rem;
@@ -1312,14 +1140,12 @@ body.poster-layout-page {
   margin-bottom: 6px;
   text-transform: uppercase;
 }
-
 .why-special-desc {
   font-size: 0.86rem;
   line-height: 1.6;
   color: #1e293b;
   font-family: 'Inter', sans-serif;
 }
-
 .collector-handwritten-quote {
   font-family: 'Caveat', cursive;
   font-size: 1.35rem;
@@ -1332,7 +1158,6 @@ body.poster-layout-page {
   margin-top: 12px;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.06);
 }
-
 .note-badge {
   display: inline-block;
   background: #0047AB;
@@ -1346,12 +1171,10 @@ body.poster-layout-page {
   text-transform: uppercase;
   width: fit-content;
 }
-
 .note-paper.rich-note {
   min-height: 400px;
   padding: 28px 24px;
 }
-
 .note-content-p {
   font-size: 0.88rem;
   line-height: 1.68;
@@ -1359,7 +1182,6 @@ body.poster-layout-page {
   margin-bottom: 12px;
   font-family: 'Inter', sans-serif;
 }
-
 .note-highlight-tag {
   background: #f1f5f9;
   border-left: 3px solid #0047AB;
@@ -1369,7 +1191,6 @@ body.poster-layout-page {
   color: #0f172a;
   margin-top: 10px;
 }
-
 .moodboard-stat-box {
   background: #0a0a0a;
   color: #ffffff;
@@ -1379,7 +1200,6 @@ body.poster-layout-page {
   border-radius: 2px;
   text-align: center;
 }
-
 .moodboard-stat-title {
   font-family: 'Anton', 'Bebas Neue', sans-serif;
   font-size: 1.3rem;
@@ -1387,14 +1207,12 @@ body.poster-layout-page {
   color: #ffffff;
   margin-bottom: 4px;
 }
-
 .moodboard-stat-detail {
   font-size: 0.72rem;
   letter-spacing: 2px;
   color: #94a3b8;
   text-transform: uppercase;
 }
-
 .concept-full-width-card {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -1404,7 +1222,6 @@ body.poster-layout-page {
   position: relative;
   transform: rotate(-0.3deg);
 }
-
 .concept-card-title {
   font-family: 'Anton', 'Bebas Neue', sans-serif;
   font-size: 1.8rem;
@@ -1413,21 +1230,18 @@ body.poster-layout-page {
   text-transform: uppercase;
   margin-bottom: 6px;
 }
-
 .concept-grid-3col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 24px;
 }
-
 .concept-item {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   padding: 22px 20px;
   border-top: 3.5px solid #0047AB;
 }
-
 .concept-item-title {
   font-family: 'Anton', 'Bebas Neue', sans-serif;
   font-size: 1.15rem;
@@ -1436,14 +1250,12 @@ body.poster-layout-page {
   margin-bottom: 8px;
   text-transform: uppercase;
 }
-
 .concept-item-p {
   font-size: 0.84rem;
   line-height: 1.65;
   color: #475569;
   font-family: 'Inter', sans-serif;
 }
-
 .academic-callout {
   margin-top: 28px;
   padding-top: 20px;
@@ -1459,18 +1271,15 @@ body.poster-layout-page {
   color: #0047AB;
   letter-spacing: 1.5px;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 .collection-stream {
   display: flex;
   flex-direction: column;
   gap: 80px;
   margin-top: 30px;
 }
-
 .spotlight-jump-bar {
   position: relative;
   top: auto;
@@ -1487,7 +1296,6 @@ html {
   overflow-x: auto;
   scrollbar-width: thin;
 }
-
 .jump-bar-title {
   font-family: 'Inter', sans-serif;
   font-size: 0.72rem;
@@ -1497,7 +1305,6 @@ html {
   white-space: nowrap;
   margin-right: 6px;
 }
-
 .jump-pill {
   display: inline-flex;
   align-items: center;
@@ -1513,7 +1320,6 @@ html {
   white-space: nowrap;
   transition: all 0.2s ease;
 }
-
 .jump-pill:hover {
   background: #0047AB;
   color: #ffffff;
@@ -1521,7 +1327,6 @@ html {
   transform: translateY(-2px);
   box-shadow: 0 3px 10px rgba(0, 71, 171, 0.25);
 }
-
 .spotlight-item-block {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
@@ -1531,24 +1336,19 @@ html {
   border-bottom: 2px dashed rgba(0, 71, 171, 0.2);
   scroll-margin-top: 130px;
 }
-
 .spotlight-item-block:last-child {
   border-bottom: none;
   padding-bottom: 20px;
 }
-
 .spotlight-item-block.reverse-layout {
   grid-template-columns: 1fr 1.15fr;
 }
-
 .spotlight-item-block.reverse-layout .spotlight-gallery {
   order: 2;
 }
-
 .spotlight-item-block.reverse-layout .spotlight-desc {
   order: 1;
 }
-
 .item-index-badge {
   display: inline-block;
   background: #0047AB;
@@ -1560,7 +1360,6 @@ html {
   margin-bottom: 8px;
   width: fit-content;
 }
-
 .back-to-top-btn {
   display: inline-flex;
   align-items: center;
@@ -1575,11 +1374,9 @@ html {
   transition: color 0.2s;
   width: fit-content;
 }
-
 .back-to-top-btn:hover {
   color: #0047AB;
 }
-
 @media (max-width: 960px) {
   .spotlight-item-block,
   .spotlight-item-block.reverse-layout {
@@ -1594,5 +1391,151 @@ html {
     order: 2;
   }
 }
-
-
+@media (max-width: 960px) and (min-width: 769px) {
+  .poster-navbar {
+    padding: 16px 24px;
+    gap: 8px;
+  }
+  .poster-nav-links {
+    gap: 20px;
+  }
+  .poster-main-viewport {
+    padding: 0 20px 20px 40px;
+  }
+}
+@media (max-width: 960px) {
+  body.poster-layout-page {
+    height: auto !important;
+    max-height: none !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    display: block !important;
+  }
+  .poster-navbar {
+    padding: 12px 4% 10px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .nav-brand-sub {
+    display: none !important;   
+  }
+  .nav-brand-title {
+    font-size: 0.9rem !important;
+    letter-spacing: 1px !important;
+  }
+  .nav-oasis-logo {
+    height: 36px !important;
+  }
+  .poster-nav-links {
+    gap: 16px !important;
+    flex-wrap: nowrap !important;
+  }
+  .poster-nav-links a {
+    font-size: 0.68rem !important;
+    letter-spacing: 1.5px !important;
+  }
+  .poster-main-viewport {
+    grid-template-columns: 1fr !important;
+    padding: 16px 4% 0 !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    align-items: start !important;
+    row-gap: 0 !important;
+  }
+  .poster-left-content {
+    padding-bottom: 20px;
+  }
+  .poster-title-img-wrapper {
+    width: 65%;
+    max-width: 260px;
+  }
+  .poster-desc-text,
+  .poster-btn-wrapper,
+  .poster-bottom-meta {
+    padding-left: 0 !important;
+    max-width: 100%;
+  }
+  .poster-right-collage {
+    position: relative !important;
+    width: 100% !important;
+    height: 270px !important;
+    min-height: unset !important;
+    overflow: hidden !important;
+    display: block !important;
+    margin-bottom: 24px;
+  }
+  .collage-stage {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 640px !important;
+    height: 520px !important;
+    transform: scale(0.52) !important;
+    transform-origin: top left !important;
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 36px 5% 56px;
+    min-height: auto;
+  }
+  .scatter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
+  }
+  .spotlight-item-block,
+  .spotlight-item-block.reverse-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .spotlight-gallery {
+    height: auto;
+  }
+  .spotlight-hero-img {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+  }
+  .detail-zoom { display: none; }
+  .text-board {
+    transform: none;
+    padding: 20px;
+  }
+  .item-title-wire { font-size: 1.8rem; }
+  .about-workbench {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .left-note, .right-note { transform: none; }
+  .moodboard-frame {
+    height: auto;
+    min-height: 240px;
+    transform: none;
+  }
+  .page-switch-bar {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .page-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 430px) {
+  .scatter-grid { grid-template-columns: 1fr; gap: 28px; }
+  .collage-stage {
+    transform: scale(0.44) !important;
+  }
+  .poster-right-collage {
+    height: 230px !important;
+  }
+  .item-title-wire { font-size: 1.5rem; }
+  .section { padding: 24px 4% 44px; }
+  .page-btn {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    padding: 10px 16px;
+  }
+}
